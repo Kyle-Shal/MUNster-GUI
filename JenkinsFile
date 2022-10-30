@@ -10,7 +10,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'python Tests/TestJobsPage.py'
+                sh '''
+                    python -m ensurepip --upgrade
+                    python Tests/TestJobsPage.py
+                '''
             }
         }
         stage('Deploy') {
