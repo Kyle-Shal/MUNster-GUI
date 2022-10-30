@@ -34,6 +34,27 @@ const profiles = [
       address: "London, England",
       job: "Computer Engineering Student at MUN"
     },
+    {
+      id: 6,
+      imgPath: "/assets/img/6.png",
+      name: "Susan Miller",
+      address: "St.John's, Newfoundland",
+      job: "Software Developer"
+    },
+    {
+      id: 7,
+      imgPath: "/assets/img/7.png",
+      name: "Edward Griffin",
+      address: "London, England",
+      job: "Software Developer"
+    },
+    {
+      id: 8,
+      imgPath: "/assets/img/8.png",
+      name: "Jessica Phillips",
+      address: "St.John's, Newfoundland",
+      job: "Software Developer"
+    },
   ];
   
   export default profiles;

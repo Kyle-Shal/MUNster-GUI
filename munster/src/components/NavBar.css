@@ -10,6 +10,7 @@
     top: 0;
     width: 100%;
     left: 0;
+    z-index: 999;
 }
 
 .navBar-box {
@@ -37,11 +38,11 @@
 
 .navItems {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: center;
-    width: 60vw;
+    width: 120vw;
     justify-content: end;
     margin-right: 2rem;
     margin-left: 600px;
@@ -55,7 +56,7 @@
     text-align: center;
     width: 60vw;
     justify-content: end;
-    margin-right: 150px;
+    margin-right: 2%;
 }
 
 .pageItem {

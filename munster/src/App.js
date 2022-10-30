@@ -1,19 +1,22 @@
 import React from "react";
-import Search from './components/Search';
-import profiles from "./data/profiles";
-//import applicants from "./data/applicants";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import People from "./components/Pages/People"
+import Home from "./components/Pages/Home"
+import Applicants from "./components/Pages/Applicants";
 
 function App() {
     return (
-        //<Search details={applicants} type="applicant"/>
-        <>
+      <>
         <Router>
-            <NavBar />
-            <Search details={profiles} type="profile"/>
+          <NavBar />
+          <Routes>
+            <Route path='/MUNster' element={<Home />} />
+            <Route path='/MUNster/people' element={<People />} />
+            <Route path='/MUNster/applicants' element={<Applicants />} />
+          </Routes>
         </Router>
-        </>
+      </>
     );
 }
 

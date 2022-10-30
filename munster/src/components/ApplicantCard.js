@@ -1,4 +1,5 @@
 import React from "react";
+import './ApplicantCard.css';
 
 function ApplicantCard({person}) {
     return (
@@ -6,7 +7,7 @@ function ApplicantCard({person}) {
             <div className='applicantBox'>
                 <h3>Applied For</h3>
                 <div className="jobBox">
-                    <h2>{person.job}</h2>
+                    <h3>{person.job}</h3>
                 </div>
                 <button className="viewApplication">View Application</button>
             </div>
