@@ -6,7 +6,7 @@ import Search from '../Search';
 function Home() {
   return (
     <>
-      <Search details={jobs} type="jobs"/>
+      <Search details={jobs} type="jobs" id="search-jobs"/>
     </>
   );
 }

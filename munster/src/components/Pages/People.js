@@ -6,7 +6,7 @@ import Search from '../Search';
 function People() {
   return (
     <>
-      <Search details={profiles} type="profile"/>
+      <Search details={profiles} type="profile" id="search-people"/>
     </>
   );
 }
