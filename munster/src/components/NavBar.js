@@ -40,7 +40,7 @@ function NavBar() {
                             </Link>
                         </li>
                         <li className="pageIcon">
-                            <Link to='/MUNster/profile' className="pageLink">
+                            <Link to='/MUNster/login' className="pageLink">
                                 <i class="fa-regular fa-user"></i>
                             </Link>
                         </li>
