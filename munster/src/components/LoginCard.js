@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LoginCard.css";
 
 function LoginCard(){
@@ -17,7 +18,7 @@ function LoginCard(){
             <br></br>
             <br></br>
             <center><p> If you do not have an account: </p></center>
-            <button className="SignupButton"> Sign Up </button>
+            <button className="SignupButton"> <Link to="/MUNster/createProfile" className="pageLink"> Sign Up </Link> </button>
             <br></br>
         </div>
     )
