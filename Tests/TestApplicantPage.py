@@ -18,30 +18,31 @@ def testApplicantsPage():
     # Find elements on page
     #
     # common nav bar elements
-    find_jobs_button = driver.find_element(by=By.CSS_SELECTOR, value="find-jobs")
-    find_companies_button = driver.find_element(by=By.CSS_SELECTOR, value="find-companies")
-    find_people_button = driver.find_element(by=By.CSS_SELECTOR, value="find-people")
-    post_job_button = driver.find_element(by=By.CSS_SELECTOR, value="post-job")
+    find_logo_button = driver.find_element(by=By.ID, value="logo")
+    find_jobs_button = driver.find_element(by=By.ID, value="jobs")
+    #find_companies_button = driver.find_element(by=By.CSS_SELECTOR, value="find-companies")
+    find_people_button = driver.find_element(by=By.ID, value="people")
+    post_job_button = driver.find_element(by=By.ID, value="post-job")
+    find_applicants_button = driver.find_element(by=By.ID, value="applicants")
 
     # page specific elements
-    posting_search_box = driver.find_element(by=By.ID, value="posting-search")
-    search_button = driver.find_element(by=By.CSS_SELECTOR, value="search-posting-button")
+    applicant_search_box = driver.find_element(by=By.ID, value="search-applicants")
+    #search_button = driver.find_element(by=By.CSS_SELECTOR, value="search-posting-button")
 
     # add elements for jobs once implemented
 
     # Test elements
     #
     # common nav bar tests
+    find_logo_button.click()
     find_jobs_button.click()
-    find_companies_button.click()
+    #find_companies_button.click()
     find_people_button.click()
     post_job_button.click()
+    find_applicants_button.click()
 
     # page specific tests
-    posting_search_box.send_keys("Test Posting Search")
-    search_button.click()
-
-    
-
+    applicant_search_box.send_keys("Test Applicant Search")
+    #search_button.click()
 
     driver.quit()
