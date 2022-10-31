@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfilePage from "../ProfilePage";
+import yourProfile from '../../data/yourProfile';
 
 function Profile() {
   return (
@@ -9,4 +10,4 @@ function Profile() {
   );
 }
 
-export default Login;
+export default Profile;

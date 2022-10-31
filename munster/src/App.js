@@ -6,6 +6,7 @@ import Home from "./components/Pages/Home"
 import Applicants from "./components/Pages/Applicants";
 import Login from "./components/Pages/Login";
 import Creation from "./components/Pages/Creation";
+import Profile from "./components/Pages/Profile";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='/MUNster/applicants' element={<Applicants />} />
             <Route path='/MUNster/login' element={<Login />} />
             <Route path='/MUNster/createProfile' element={<Creation/>} />
+            <Route path="/MUNster/profile" element={<Profile/>} />
           </Routes>
         </Router>
       </>

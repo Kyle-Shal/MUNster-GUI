@@ -1,5 +1,6 @@
 import React from "react";
 import yourProfile from "../data/yourProfile";
+import { Link } from "react-router-dom";
 import "./ProfileCreation.css";
 
 function ProfileCreation(){
@@ -125,7 +126,7 @@ function ProfileCreation(){
                 <input className="experienceInputs"></input>
             </div>
         </div> 
-        <button type="Submit" className="submitButton">Submit</button>
+        <button type="Submit" className="submitButton"><Link to="/MUNster/profile">Submit</Link></button>
     </div>
     )
 }
