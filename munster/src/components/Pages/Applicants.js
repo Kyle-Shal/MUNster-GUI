@@ -6,7 +6,7 @@ import Search from '../Search';
 function Applicants() {
   return (
     <>
-        <Search details={applicants} type="applicant"/>    
+        <Search details={applicants} type="applicant" id="search-applicants"/>    
     </>
   );
 }
