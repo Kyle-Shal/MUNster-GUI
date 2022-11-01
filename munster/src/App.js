@@ -4,6 +4,8 @@ import NavBar from "./components/NavBar";
 import People from "./components/Pages/People"
 import Home from "./components/Pages/Home"
 import Applicants from "./components/Pages/Applicants";
+import CreateJobPosting from "./components/Pages/CreateJobPosting";
+import OtherPersonProfile from "./components/Pages/OtherPersonProfile";
 import JobDetails from "./components/Pages/JobDetails";
 import JobApplication from "./components/JobApplication"
 import Login from "./components/Pages/Login";
@@ -25,6 +27,7 @@ function App() {
             <Route path='/MUNster/login' element={<Login />} />
             <Route path='/MUNster/createProfile' element={<Creation/>} />
             <Route path="/MUNster/profile" element={<Profile/>} />
+            <Route path='/MUNster/jobpost' element={<CreateJobPosting />}/>
           </Routes>
         </Router>
 

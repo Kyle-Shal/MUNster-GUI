@@ -25,6 +25,11 @@
     color: #EFEFEF;
 }
 
+.connectLink {
+    color: white;
+    text-decoration: none;
+}
+
 .name {
     position: absolute;
     width: 350px;
