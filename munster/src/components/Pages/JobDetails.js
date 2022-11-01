@@ -5,7 +5,7 @@ import DetailedPosting from "../DetailedPosting";
 function JobDetails() {
   return (
     <>
-        <DetailedPosting />    
+      <DetailedPosting />    
     </>
   );
 }

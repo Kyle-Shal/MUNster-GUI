@@ -5,7 +5,8 @@ import '../JobApplication.css'
 function PriorExperience() {
     const [jobList, setJobList] = useState([{ job: ""}]);
     const [volunteerList, setVolunteerList] = useState([{ volunteer: ""}]);
-   
+    console.log(jobList);
+    console.log(volunteerList);
     const handleJobAdd = () => {
         setJobList([...jobList, {job: ""}])
     }
@@ -16,19 +17,27 @@ function PriorExperience() {
         setJobList(list)
     }
 
-    // const handleJobChange = (e, index) => {
-    //     const { name, value} = e.target; 
-    //     const list = [...jobList];
-    //     list[index][name] = value;
-    //     setJobList(list)
-    // }
+    const handleJobChange = (e, index) => {
+        const { name, value} = e.target; 
+        const list = [...jobList];
+        list[index][name] = value;
+        setJobList(list)
+    }
 
     const handleVolunteerAdd = () => {
         setVolunteerList([...volunteerList, {volunteer: ""}])
     }
+
     const handleVolunteerDelete = (index) => {
         const list = [...volunteerList];
         list.splice(index, 1);
+        setVolunteerList(list)
+    }
+
+    const handleVolunteerChange = (e, index) => {
+        const { name, value} = e.target; 
+        const list = [...volunteerList];
+        list[index][name] = value;
         setVolunteerList(list)
     }
 
@@ -37,6 +46,7 @@ function PriorExperience() {
         document.querySelector("[for=" + labelId + "]").style.textDecoration = "underlined"
         document.querySelector("[for=" + labelId + "]").style.fontWeight = "550"
     }
+
     const blurLabel = (labelId) => {
         document.querySelector("[for=" + labelId + "]").style.color = "black"
         document.querySelector("[for=" + labelId + "]").style.textDecoration = ""
@@ -57,11 +67,12 @@ function PriorExperience() {
                     <div className="experience" key={index}>
                         <div className="experience_input">
                             <textarea className="input_box" 
-                            id="job_experience" 
-                            onFocus={() => focusLabel("job_experience")}
-                            onBlur={() => blurLabel("job_experience")}
-                            name="Job Experience" 
-                            
+                            id="job" 
+                            onFocus={() => focusLabel("job")}
+                            onBlur={() => blurLabel("job")}
+                            name="job" 
+                            value={singleJob.job}
+                            onChange= {(e) => handleJobChange(e, index)}
                             required />
         
                         </div>
@@ -88,13 +99,13 @@ function PriorExperience() {
                             <div className="">
                                 {/* <textarea></textarea> */}
                                 <textarea className="input_box" 
-                                id="volunteer_experience" 
-                                onFocus={() => focusLabel("volunteer_experience")}
-                                onBlur={() => blurLabel("volunteer_experience")}
-                                name="Volunteer Experience" 
-                                required />
-                                {/* value={singleJob.job} /> */}
-                                {/* onChange= {(e) => handleJobChange(e, index)}/> */}
+                                id="volunteer" 
+                                onFocus={() => focusLabel("volunteer")}
+                                onBlur={() => blurLabel("volunteer")}
+                                name="volunteer" 
+                                required 
+                                value={singleVolunteer.job}  
+                                onChange= {(e) => handleVolunteerChange(e, index)}/>
                             </div>
                             {volunteerList.length > 1 && (
                                 <button className="remove" onClick={() => handleVolunteerDelete(index)}>
