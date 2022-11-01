@@ -50,8 +50,8 @@ function ProfileCreation(){
 
     /* Function to check that all fields are filled and to post job */
     const createProfile = () => {
-        if (localStorage.getItem("Created Profile ")){
-            localStorage.removeItem("Created Profile");
+        if (localStorage.getItem("Created Profile 1")){
+            localStorage.removeItem("Created Profile 1");
         }
         storeCreatedProfile(formData);
         alert("Profile Created successfully!")
