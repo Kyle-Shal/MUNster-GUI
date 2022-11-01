@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 import './JobCard.css';
 
 function JobCard({job}) {
@@ -19,7 +20,11 @@ function JobCard({job}) {
                 <h4>{job.salary}</h4>
                 <h4>{job.mode}</h4>
                 <h4>{job.duration}</h4>
-                <button className="more">More</button>
+                <Link to='/MUNster/jobs/details'
+                state = {{jobDetails: job}}>
+                 <button className="more">More</button>
+                 </Link>
+                
             </div>
         </div>
     );
