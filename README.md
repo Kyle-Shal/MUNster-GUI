@@ -1,3 +1,3 @@
 # MUNster-GUI
 
-Repo for GUI Module for MUNster Project
+Repo for GUI Module for MUNster Project.

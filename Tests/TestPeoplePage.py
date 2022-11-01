@@ -3,14 +3,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
-def testJobsPage():
+def testApplicantsPage():
 
     # Start a session   
     driver = webdriver.Chrome(service=ChromeService(executable_path=ChromeDriverManager().install()))
 
-    # Take action on browser 
-    # selenium grid @ http://sdp.guru:4444/wd/hub
-    driver.get("http://localhost:3000/MUNster")
+    # Take action on browser
+    driver.get("http://localhost:3000/MUNster/people")
 
 
     # Establish waiting strategy (wait until element exists on page and is interactable before testing)
@@ -27,11 +26,10 @@ def testJobsPage():
     find_applicants_button = driver.find_element(by=By.ID, value="applicants")
 
     # page specific elements
-    keyword_search_box = driver.find_element(by=By.ID, value="search-jobs")
-    #location_search_box = driver.find_element(by=By.NAME, value="location-search")
-    #search_button = driver.find_element(by=By.CSS_SELECTOR, value="search")
+    people_search_box = driver.find_element(by=By.ID, value="search-people")
+    #search_button = driver.find_element(by=By.CSS_SELECTOR, value="search-posting-button")
 
-    # add elements for posted jobs once implemented
+    # add elements for jobs once implemented
 
     # Test elements
     #
@@ -44,10 +42,7 @@ def testJobsPage():
     find_applicants_button.click()
 
     # page specific tests
-    keyword_search_box.send_keys("Test keyword search")
-    #location_search_box.send_keys("Test location search")
+    people_search_box.send_keys("Test People Search")
     #search_button.click()
-
-    # add tests for posted jobs once implemented
 
     driver.quit()

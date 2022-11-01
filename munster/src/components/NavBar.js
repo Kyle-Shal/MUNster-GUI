@@ -8,27 +8,27 @@ function NavBar() {
         <>
             <nav className='navBar' >
                 <div className="navBar-box" >
-                    <Link to='/MUNster' className='logo' >
+                    <Link to='/MUNster' className='logo' id="logo" >
                         MUNster
                     </Link>
                     <ul className='navItems'>
                         <li className='pageItem' >
-                            <Link to='/MUNster' className="pageLink">
+                            <Link to='/MUNster' className="pageLink" id="jobs">
                                 Jobs
                             </Link>
                         </li>
                         <li className='pageItem' >
-                            <Link to='/MUNster/people' className="pageLink">
+                            <Link to='/MUNster/people' className="pageLink" id="people">
                                 People
                             </Link>
                         </li>
                         <li className='pageItem' >
-                            <Link to='/MUNster/jobpost' className="pageLink">
+                            <Link to='/MUNster/jobpost' className="pageLink" id="post-job">
                                 Post a Job
                             </Link>
                         </li>
                         <li className='pageItem' >
-                            <Link to='/MUNster/applicants' className="pageLink">
+                            <Link to='/MUNster/applicants' className="pageLink" id="applicants">
                                 Applicants
                             </Link>
                         </li>
