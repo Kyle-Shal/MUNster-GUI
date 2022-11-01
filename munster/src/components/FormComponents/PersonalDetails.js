@@ -1,8 +1,4 @@
-import { react, useState } from "react";
 import '../JobApplication.css'
-
-
-
 
 function PersonalDetails({formData, handleChange}) {
 
@@ -32,7 +28,8 @@ function PersonalDetails({formData, handleChange}) {
                     id= "first_name" 
                     value={formData.first_name}
                     onChange={handleChange}
-                    type="text" ></input>
+                    type="text" 
+                    required></input>
                 </div>
                 
                 <div className="single_input">
@@ -45,6 +42,7 @@ function PersonalDetails({formData, handleChange}) {
                     value={formData.last_name}
                     onChange={handleChange}
                     type="text" 
+                    required
                     ></input>
                 </div>
 
@@ -57,7 +55,8 @@ function PersonalDetails({formData, handleChange}) {
                     id="email" 
                     value={formData.email}
                     onChange={handleChange}
-                    type="text" ></input>
+                    type="text" 
+                    required></input>
                 </div>
 
                 <div className="single_input">
@@ -70,6 +69,7 @@ function PersonalDetails({formData, handleChange}) {
                     value={formData.phone_number}
                     onChange={handleChange}
                     type="text" 
+                    required
                     ></input>
                 </div>
 
@@ -83,6 +83,7 @@ function PersonalDetails({formData, handleChange}) {
                     value={formData.address}
                     onChange={handleChange}
                     type="text" 
+                    required
                     ></input>
                 </div>
                 

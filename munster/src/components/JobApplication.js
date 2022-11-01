@@ -4,7 +4,7 @@ import DocumentUpload from './FormComponents/DocumentUpload'
 import PersonalDetails from './FormComponents/PersonalDetails'
 import PriorExperience from './FormComponents/PriorExperience'
 import './JobApplication.css'
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const createJobApplication = {
     first_name: "",
@@ -69,12 +69,20 @@ function JobApplication() {
     }
     
     const storeSavedChanges = (formData) => {
-        localStorage.setItem("Saved Changes" + jobDetails.id, JSON.stringify(formData))
+        localStorage.setItem("Saved Application" + jobDetails.id, JSON.stringify(formData))
+    }
+
+    //Stores submitted form in local storage
+    //When working with backend a user id will have to be attached
+    const submitApplication = () => {  
+        localStorage.removeItem("Saved Application" + jobDetails.id);
+        localStorage.setItem("Submitted Application" + jobDetails.id, JSON.stringify(formData));
+        alert("Form submitted successfully!")
     }
 
     //gets saved changes from local storage to display in input boxes
-    if (localStorage.getItem("Saved Changes" + jobDetails.id)) {
-        var savedChanges = JSON.parse(localStorage.getItem("Saved Changes" + jobDetails.id));
+    if (localStorage.getItem("Saved Application" + jobDetails.id)) {
+        var savedChanges = JSON.parse(localStorage.getItem("Saved Application" + jobDetails.id));
         for (var saved in savedChanges) {
             createJobApplication[saved] = savedChanges[saved]
         }
@@ -82,9 +90,9 @@ function JobApplication() {
 
     //used to switch between steps
     const formDisplay = () => {
-        if (page == 0) {
+        if (page === 0) {
             return <DocumentUpload />
-        } else if (page == 1) {
+        } else if (page === 1) {
             return <PersonalDetails handleChange={handleChange} formData={formData}/>
         } else {
             return <PriorExperience handleJobChange={handleJobChange} handleVolunteerChange={handleVolunteerChange} formData={formData} setFormData={setFormData} />
@@ -149,9 +157,11 @@ function JobApplication() {
                             <button className="progress_button" onClick={saveChanges}>
                                 Save
                             </button>
-                            <button className="progress_button">
+                            <Link to='/MUNster'>
+                            <button type="submit" className="progress_button" onClick={submitApplication}>
                                 Submit
                             </button>
+                            </Link>
                         </div>
                     </ul>
                 </div>
