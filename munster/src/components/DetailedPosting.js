@@ -1,15 +1,16 @@
 import React from 'react';
 import './DetailedPosting.css'
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+
 
 
 function DetailedPosting() {
     const location = useLocation()
     const {jobDetails} = location.state
-    console.log(location, " useLocation Hook");
+
+    
     return(
         <div className='main' >
-            
             <h1>
                 {jobDetails.jobTitle}
             </h1>
@@ -19,9 +20,12 @@ function DetailedPosting() {
                     <h1> Detailed Description </h1>
                     <p> <NewLine text={jobDetails.summary} />
                     </p>
+                    <Link to="/MUNster/jobs/apply"
+                    state = {{jobDetails: jobDetails}}>
                     <button className='apply_button'>
                         Apply
                     </button>
+                    </Link>
                 </div>
                 <div className="side_bar" >
                     <h1> Job Description </h1>
