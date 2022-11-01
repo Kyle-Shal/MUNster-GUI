@@ -7,7 +7,7 @@ function EducationCard({person}) {
                 <h2>{person.schoolName}</h2>
                 <h3>{person.schoolAddress}</h3>
                 <p>{person.programName}</p>
-                <p>{person.schoolDates}</p>
+                <p>{person.schoolStartDate} - {person.schoolEndDate}</p>
             </div>
     );
 }

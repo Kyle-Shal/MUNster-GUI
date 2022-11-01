@@ -4,10 +4,10 @@ import './VolunteerCard.css';
 function VolunteerCard({person}) {
     return (
             <div className='volunteerPostingBox'>
-                <h2>{person.volunteerPosition}</h2>
-                <h3>{person.volunteerPlace}</h3>
+                <h2>{person.volunteerTitle}</h2>
+                <h3>{person.volunteerOrgName}</h3>
+                <p>{person.volunteerStartDate} - {person.volunteerEndDate}</p>
                 <p>{person.volunteerOverview}</p>
-                <p>{person.volunteerDates}</p>
             </div>
     );
 }

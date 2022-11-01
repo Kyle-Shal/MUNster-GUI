@@ -4,10 +4,11 @@ import './JobExperienceCard.css';
 function JobExperienceCard({person}) {
     return (
             <div className='jobExperiencePostingBox'>
-                <h2>{person.previousJob}</h2>
-                <h3>{person.previousJobPlace}</h3>
-                <p>{person.previousJobDescription}</p>
-                <p>{person.previousJobDates}</p>
+                <h2>{person.jobTitle}</h2>
+                <h3>{person.companyName}</h3>
+                <p>{person.companyAddress}</p>
+                <p>{person.jobStartDate} - {person.jobEndDate}</p>
+                <p>{person.jobDescription}</p>
             </div>
     );
 }
