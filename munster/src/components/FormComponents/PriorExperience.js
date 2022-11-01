@@ -2,45 +2,50 @@ import {react, useState} from "react";
 import '../JobApplication.css'
 
 
-function PriorExperience() {
-    const [jobList, setJobList] = useState([{ job: ""}]);
-    const [volunteerList, setVolunteerList] = useState([{ volunteer: ""}]);
-    console.log(jobList);
-    console.log(volunteerList);
+function PriorExperience({handleJobChange, handleVolunteerChange, formData, setFormData}) {
+    
+    // Allows user to add multiple job entries
     const handleJobAdd = () => {
-        setJobList([...jobList, {job: ""}])
+        const list = formData.job_experience
+        const newList = [...list, {job: ""}]
+        setFormData({
+            ...formData,
+            "job_experience": newList
+        })
     }
 
+    //Allows user to delete job entries
     const handleJobDelete = (index) => {
-        const list = [...jobList];
+        const list = formData.job_experience
         list.splice(index, 1);
-        setJobList(list)
+        setFormData({
+            ...formData,
+            "job_experience": list
+        })
     }
 
-    const handleJobChange = (e, index) => {
-        const { name, value} = e.target; 
-        const list = [...jobList];
-        list[index][name] = value;
-        setJobList(list)
-    }
-
+    //Allows user to add multiple volunteer entries
     const handleVolunteerAdd = () => {
-        setVolunteerList([...volunteerList, {volunteer: ""}])
+        const list = formData.volunteer_experience
+        const newList = [...list, {volunteer: ""}]
+        setFormData({
+            ...formData,
+            "volunteer_experience": newList
+        })
+        
     }
 
+    //Allows user to delete volunteer entries
     const handleVolunteerDelete = (index) => {
-        const list = [...volunteerList];
+        const list = formData.volunteer_experience
         list.splice(index, 1);
-        setVolunteerList(list)
+        setFormData({
+            ...formData,
+            "volunteer_experience": list
+        })
     }
 
-    const handleVolunteerChange = (e, index) => {
-        const { name, value} = e.target; 
-        const list = [...volunteerList];
-        list[index][name] = value;
-        setVolunteerList(list)
-    }
-
+    //Highlight label when use clicks on certain input box
     const focusLabel = (labelId) => {
         document.querySelector("[for=" + labelId + "]").style.color = "#8b0000"
         document.querySelector("[for=" + labelId + "]").style.textDecoration = "underlined"
@@ -63,7 +68,7 @@ function PriorExperience() {
                     </button>
                 </div>
                 <div className="input_container">
-                {jobList.map((singleJob, index) => (
+                {formData.job_experience.map((singleJob, index) => (
                     <div className="experience" key={index}>
                         <div className="experience_input">
                             <textarea className="input_box" 
@@ -72,11 +77,11 @@ function PriorExperience() {
                             onBlur={() => blurLabel("job")}
                             name="job" 
                             value={singleJob.job}
-                            onChange= {(e) => handleJobChange(e, index)}
+                            onChange={(e) => handleJobChange(e, index)}
                             required />
         
                         </div>
-                        {jobList.length > 1 && (
+                        {formData.job_experience.length > 1 && (
                         <button className="remove" onClick={() => handleJobDelete(index)}>
                             Remove
                         </button>
@@ -94,7 +99,7 @@ function PriorExperience() {
                     </button>
                 </div>
                 <div className="input_container">
-                    {volunteerList.map((singleVolunteer, index) => (
+                    {formData.volunteer_experience.map((singleVolunteer, index) => (
                         <div className="experience" key={index}>
                             <div className="">
                                 {/* <textarea></textarea> */}
@@ -104,10 +109,10 @@ function PriorExperience() {
                                 onBlur={() => blurLabel("volunteer")}
                                 name="volunteer" 
                                 required 
-                                value={singleVolunteer.job}  
+                                value={singleVolunteer.volunteer}  
                                 onChange= {(e) => handleVolunteerChange(e, index)}/>
                             </div>
-                            {volunteerList.length > 1 && (
+                            {formData.volunteer_experience.length > 1 && (
                                 <button className="remove" onClick={() => handleVolunteerDelete(index)}>
                                 Remove
                                 </button>

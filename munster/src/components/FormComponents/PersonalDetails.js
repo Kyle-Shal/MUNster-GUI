@@ -1,7 +1,12 @@
 import { react, useState } from "react";
 import '../JobApplication.css'
 
-function PersonalDetails() {
+
+
+
+function PersonalDetails({formData, handleChange}) {
+
+    //highlights input box labels
     const focusLabel = (labelId) => {
         document.querySelector("[for=" + labelId + "]").style.color = "#8b0000"
         document.querySelector("[for=" + labelId + "]").style.textDecoration = "underlined"
@@ -13,27 +18,11 @@ function PersonalDetails() {
         document.querySelector("[for=" + labelId + "]").style.textDecoration = ""
         document.querySelector("[for=" + labelId + "]").style.fontWeight = ""
     }
-
-
-    const [formData, setFormData] = useState({
-        first_name: "",
-        last_name: "",
-        email: "",
-        address: "",
-        phone_number: ""
-    });
-    console.log(formData)
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        })
-    }
-
+    
     return(
         <div className="form_container">
             <div className="input_container">
+            
                 <div className="single_input">
                     <p className="entry_header" > First Name </p>
                     <input className="info_input" 
@@ -48,14 +37,12 @@ function PersonalDetails() {
                 
                 <div className="single_input">
                     <p className="entry_header" > Last Name </p>
-
-                    {/* <label className="entry_header" htmlFor="last_name"> Last Name </label> */}
                     <input className="info_input"
                     name="last_name"
                     onFocus={() => focusLabel("last_name")}
                     onBlur={() => blurLabel("last_name")} 
                     id="last_name" 
-                    value={formData.last_ame}
+                    value={formData.last_name}
                     onChange={handleChange}
                     type="text" 
                     ></input>
