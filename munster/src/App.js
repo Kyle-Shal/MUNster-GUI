@@ -6,6 +6,11 @@ import Home from "./components/Pages/Home"
 import Applicants from "./components/Pages/Applicants";
 import CreateJobPosting from "./components/Pages/CreateJobPosting";
 import OtherPersonProfile from "./components/Pages/OtherPersonProfile";
+import JobDetails from "./components/Pages/JobDetails";
+import JobApplication from "./components/JobApplication"
+import Login from "./components/Pages/Login";
+import Creation from "./components/Pages/Creation";
+import Profile from "./components/Pages/Profile";
 
 function App() {
     return (
@@ -13,13 +18,19 @@ function App() {
         <Router>
           <NavBar />
           <Routes>
-            <Route path='/MUNster' element={<Home />} />
+            <Route index element={<Home />} />
+            <Route path='MUNster' element={<Home />} />
             <Route path='/MUNster/people' element={<People />} />
             <Route path='/MUNster/applicants' element={<Applicants />} />
+            <Route path='/MUNster/jobs/details' element={<JobDetails />} />
+            <Route path='/MUNster/jobs/apply' element={<JobApplication />}/>
+            <Route path='/MUNster/login' element={<Login />} />
+            <Route path='/MUNster/createProfile' element={<Creation/>} />
+            <Route path="/MUNster/profile" element={<Profile/>} />
             <Route path='/MUNster/jobpost' element={<CreateJobPosting />}/>
-            <Route path='/MUNster/otherPersonProfile' element={<OtherPersonProfile />}/>
           </Routes>
         </Router>
+
       </>
     );
 }
