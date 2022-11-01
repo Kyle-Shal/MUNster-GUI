@@ -61,9 +61,9 @@ function PriorExperience() {
                             onFocus={() => focusLabel("job_experience")}
                             onBlur={() => blurLabel("job_experience")}
                             name="Job Experience" 
+                            
                             required />
-                            {/* value={singleJob.job} /> */}
-                            {/* onChange= {(e) => handleJobChange(e, index)}/> */}
+        
                         </div>
                         {jobList.length > 1 && (
                         <button className="remove" onClick={() => handleJobDelete(index)}>
