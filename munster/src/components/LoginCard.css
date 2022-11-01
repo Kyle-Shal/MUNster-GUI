@@ -17,6 +17,7 @@
     text-align:center;
     border:none;
     border-radius:10px;
+    color:#8b0000;
 }
 
 .SignupButton{
@@ -38,7 +39,7 @@
 }
 
 .pageLink {
-    color: #000000;
+    color: #8b0000;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -50,4 +51,8 @@
     padding: 0.5rem 1rem;
     height: 5px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.loginText{
+    color: #8b0000;
 }
