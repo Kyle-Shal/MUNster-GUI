@@ -44,7 +44,7 @@ function ProfilePage() {
         <div>
             <img className='profilePicture' alt={createdProfile.firstName} src="https://t4.ftcdn.net/jpg/02/79/66/93/360_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg" />
             <div className='box'>
-                <button className="edit"></button>
+                <button className="edit"><i class="fa-solid fa-pencil"></i></button>
                 <div className='description'>
                     <center>
                         <p className='header'>{createdProfile.firstName}</p>
