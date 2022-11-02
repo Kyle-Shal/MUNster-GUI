@@ -31,8 +31,8 @@ function ProfilePage() {
         programName: "",
     };
 
-     if (localStorage.getItem("CreatedProfile 1")) {
-        var currentProfile = JSON.parse(localStorage.getItem("CreatedProfile 1"));
+     if (localStorage.getItem("CreatedProfile")) {
+        var currentProfile = JSON.parse(localStorage.getItem("CreatedProfile"));
         for (var entry in currentProfile) {
             createdProfile[entry] = currentProfile[entry];
         }
@@ -47,7 +47,7 @@ function ProfilePage() {
                 <button className="edit"><i class="fa-solid fa-pencil"></i></button>
                 <div className='description'>
                     <center>
-                        <p className='header'>{createdProfile.firstName}</p>
+                        <p className='header'>{createdProfile.firstName} {createdProfile.lastName}</p>
                         <p className='jobDes'>{createdProfile.jobDescription}</p>
                     </center>
                 </div>
