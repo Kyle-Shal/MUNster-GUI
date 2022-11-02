@@ -12,8 +12,6 @@ function Card({ person }) {
     }
 
     const goToProfile = () => {
-        console.log(person);
-        console.log(connectProfile);
         localStorage.setItem("connectProfile", JSON.stringify(connectProfile));
     }
 
