@@ -1,6 +1,6 @@
 import './CreateJob.css';
 
-function EmployerDetails({formData, handleChange}) {
+function EmployerDetailsSection({formData, handleChange}) {
 
     const focusLabel = (labelId) => {
         document.querySelector("[for=" + labelId + "]").style.color = "#8b0000";
@@ -19,7 +19,7 @@ function EmployerDetails({formData, handleChange}) {
             <h2 className='sectionHeader'>Employer Details</h2>
             <label className='entryHeader' htmlFor="companyName">Company Name</label><br />
             <textarea
-                className='inputs'
+                className='inputsCreateJob'
                 name="companyName"
                 id="companyName"
                 value={formData.companyName}
@@ -30,7 +30,7 @@ function EmployerDetails({formData, handleChange}) {
             /><br />
             <label className='entryHeader' htmlFor="companyLocation">Company Location</label><br />
             <textarea
-                className='inputs'
+                className='inputsCreateJob'
                 name="companyLocation"
                 id="companyLocation"
                 value={formData.companyLocation}
@@ -43,4 +43,4 @@ function EmployerDetails({formData, handleChange}) {
     )
 }
 
-export default EmployerDetails;
+export default EmployerDetailsSection;

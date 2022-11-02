@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './../CreateJob.css';
-import EmployerDetails from './../EmployerDetails';
-import JobDetails from './../JobDetails';
-import ShowSteps from './../ShowSteps';
+import './CreateJob.css';
+import EmployerDetailsSection from './EmployerDetailsSection';
+import JobDetailsSection from './JobDetailsSection';
+import ShowSteps from './ShowSteps';
 
 /* Job post creation entries for Employer Details Section*/
 const createJobEntries = {
@@ -48,10 +48,10 @@ function CreateJobPosting() {
     /* Render either employer or job details page based on state */
     const jobStep = () => {
         if (step === 0) {
-            return <EmployerDetails formData={formData} handleChange={handleChange} />;
+            return <EmployerDetailsSection formData={formData} handleChange={handleChange} />;
         }
         else {
-            return <JobDetails formData={formData} handleChange={handleChange} />;
+            return <JobDetailsSection formData={formData} handleChange={handleChange} />;
         }
     }
 
