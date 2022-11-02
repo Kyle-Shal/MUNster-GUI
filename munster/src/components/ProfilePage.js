@@ -34,12 +34,9 @@ function ProfilePage() {
      if (localStorage.getItem("CreatedProfile 1")) {
         var currentProfile = JSON.parse(localStorage.getItem("CreatedProfile 1"));
         for (var entry in currentProfile) {
-             createdProfile[entry] = currentProfile[entry];
+            createdProfile[entry] = currentProfile[entry];
         }
      }
-    else{
-        alert("youre in the else");
-    }
     
 
     return (
