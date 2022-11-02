@@ -1,27 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import './AssociatedPeopleCard.css';
-
-const connectProfile = {
-    connectId: "",
-    connectName: "",
-    connectJob: "",
-    connectImg: ""
-}
 
 function AssociatedPeopleCard({ person }) {
 
-    const [connectPerson, setConnectPerson] = useState(connectProfile)
+    const connectProfile = {
+        connectId: person.id,
+        connectName: person.name,
+        connectJob: person.job,
+        connectImg: person.imgPath
+    }
 
     const goToProfile = () => {
-        setConnectPerson({
-            connectId: person.id,
-            connectName: person.name,
-            connectJob: person.job,
-            connectImg: person.imgPath
-        })
-        localStorage.setItem("connectProfile", JSON.stringify(connectPerson));
+        console.log(person);
+        console.log(connectProfile);
+        localStorage.setItem("connectProfile", JSON.stringify(connectProfile));
+        window.location.reload();
     }
 
     return (

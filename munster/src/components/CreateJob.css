@@ -97,7 +97,7 @@
     color: #000000;
 }
 
-.inputs {
+.inputsCreateJob {
     box-sizing: content-box;
     width: 90%;
     height: 40px;
@@ -111,7 +111,7 @@
     border-radius: 10px;
 }
 
-.inputs:focus {
+.inputsCreateJob:focus {
     outline-color: #8b0000;
 }
 

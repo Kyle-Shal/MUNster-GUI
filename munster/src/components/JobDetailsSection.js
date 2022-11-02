@@ -1,6 +1,6 @@
 import './CreateJob.css';
 
-function JobDetails({formData, handleChange}) {
+function JobDetailsSection({formData, handleChange}) {
 
     const focusLabel = (labelId) => {
         document.querySelector("[for=" + labelId + "]").style.color = "#8b0000";
@@ -19,7 +19,7 @@ function JobDetails({formData, handleChange}) {
             <h2 className='sectionHeader'>Job Details</h2>
             <label className='entryHeader' htmlFor="jobTitle">Job Title</label><br />
             <textarea
-                className='inputs'
+                className='inputsCreateJob'
                 name="jobTitle"
                 id="jobTitle"
                 value={formData.jobTitle}
@@ -30,7 +30,7 @@ function JobDetails({formData, handleChange}) {
             /><br />
             <label className='entryHeader' htmlFor="jobDesc">Job Description</label><br />
             <textarea
-                className='inputs'
+                className='inputsCreateJob'
                 name="jobDesc"
                 id="jobDesc"
                 value={formData.jobDesc}
@@ -41,7 +41,7 @@ function JobDetails({formData, handleChange}) {
             /><br />
             <label className='entryHeader' htmlFor="addInfo">Additional Information</label><br />
             <textarea
-                className='inputs'
+                className='inputsCreateJob'
                 name="addInfo"
                 id="addInfo"
                 value={formData.addInfo}
@@ -51,7 +51,7 @@ function JobDetails({formData, handleChange}) {
             /><br />
             <label className='entryHeader' htmlFor="quals">Applicant Qualifications</label><br />
             <textarea
-                className='inputs'
+                className='inputsCreateJob'
                 name="quals"
                 id="quals"
                 value={formData.quals}
@@ -62,7 +62,7 @@ function JobDetails({formData, handleChange}) {
             /><br />
             <label className='entryHeader' htmlFor="jobType">Job Type</label><br />
             <textarea
-                className='inputs'
+                className='inputsCreateJob'
                 name="jobType"
                 id="jobType"
                 value={formData.jobType}
@@ -73,7 +73,7 @@ function JobDetails({formData, handleChange}) {
             /><br />
             <label className='entryHeader' htmlFor="salary">Salary Information</label><br />
             <textarea
-                className='inputs'
+                className='inputsCreateJob'
                 name="salary"
                 id="salary"
                 value={formData.salary}
@@ -84,7 +84,7 @@ function JobDetails({formData, handleChange}) {
             /><br />
             <label className='entryHeader' htmlFor="startDate">Expected Start Date</label><br />
             <textarea
-                className='inputs'
+                className='inputsCreateJob'
                 name="startDate"
                 id="startDate"
                 value={formData.startDate}
@@ -94,7 +94,7 @@ function JobDetails({formData, handleChange}) {
             /><br />
             <label className='entryHeader' htmlFor="expiry">Posting Expiry Date</label><br />
             <textarea
-                className='inputs'
+                className='inputsCreateJob'
                 name="expiry"
                 id="expiry"
                 value={formData.expiry}
@@ -106,4 +106,4 @@ function JobDetails({formData, handleChange}) {
     )
 }
 
-export default JobDetails;
+export default JobDetailsSection;
