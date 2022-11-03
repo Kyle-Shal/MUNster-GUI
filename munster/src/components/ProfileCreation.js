@@ -64,7 +64,7 @@ function ProfileCreation(){
           <div >
             <p className="titles"> Email </p>
             <br></br>
-            <input className="inputs" name="email" id="email" value={formData.email} onChange={handleChange}></input>
+            <input className="inputs" name="email" id="email" value={formData.email} onChange={handleChange} type="email"></input>
             <br></br>
             <p className="titles"> First Name </p>
             <br></br>
@@ -85,7 +85,7 @@ function ProfileCreation(){
           <div >
             <p className="titles"> Password </p>
             <br></br>
-            <input className="inputs" name="password" id="password" value={formData.password} onChange={handleChange}></input>
+            <input className="inputs" name="password" id="password" value={formData.password} onChange={handleChange} type="password"></input>
             <br></br>
             <p className="titles"> Last Name </p>
             <br></br>
