@@ -3,6 +3,7 @@ FROM ubuntu:22.04
 RUN apt update
 RUN apt upgrade -y
 RUN apt install nodejs -y
+RUN apt nodejs -v
 RUN apt install npm -y
 RUN apt install python3 -y
 COPY . /repo
