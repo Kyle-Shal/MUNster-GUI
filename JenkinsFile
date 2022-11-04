@@ -7,11 +7,10 @@ pipeline {
                 echo 'Building..'
                 dir("munster")
                 {
-                    sh 
-                    '''
+                    sh """
                     npm install
                     npm run
-                    '''
+                    """
                 }
             }
         }
