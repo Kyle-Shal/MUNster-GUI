@@ -16,7 +16,7 @@ pipeline {
                     npm run
                     """
                 }
-                echo "Success!"
+                echo "Successful Build"
             }
         }
         stage('Test') {
