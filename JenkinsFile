@@ -9,7 +9,6 @@ pipeline {
                     pwd
                     ls
                     cd /var/lib/jenkins/workspace/MUNster-GUI_creating-docker-file/munster
-                    npm install
                     npm start                
                 """
             }
