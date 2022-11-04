@@ -1,16 +1,28 @@
 pipeline {
-    agent any
+    agent { 
+        dockerfile {
+                args '-u root --privileged'
+            }
+        } 
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
+                dir("munster")
+                {
+                    sh """
+                    npm install
+                    npm run
+                    """
+                }
+                echo "Successful Build"
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'python Tests/pythontest.py'
+
             }
         }
         stage('Deploy') {
