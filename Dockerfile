@@ -4,7 +4,8 @@ RUN apt update
 RUN apt upgrade -y
 RUN apt install nodejs -y
 RUN apt nodejs -v
-RUN apt install npm -y
+RUN npm install -g n
+RUN n stable
 RUN apt install python3 -y
 COPY . /repo
 WORKDIR /repo/munster
