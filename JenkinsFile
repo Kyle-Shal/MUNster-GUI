@@ -5,12 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh """
-                    pwd
-                    ls
-                    cd /var/lib/jenkins/workspace/MUNster-GUI_creating-docker-file/munster
-                    npm start                
-                """
+                dir("munster")
+                {
+                    sh 
+                    '''
+                    npm install
+                    npm run
+                    '''
+                }
             }
         }
         stage('Test') {
