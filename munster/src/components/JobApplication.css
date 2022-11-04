@@ -97,7 +97,7 @@
 }
 
 .progress_bar_list > h2 {
-    font-size: medium;
+    font-size: large;
     text-align: left;
     padding-left: 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -106,7 +106,7 @@
 }
 
 .medium_text_side, .entry_header_side {
-    font-size: small;
+    font-size: medium;
     text-align: left;
     padding-left: 10px;
     font-family: Arial, Helvetica, sans-serif;

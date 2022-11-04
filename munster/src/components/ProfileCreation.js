@@ -45,13 +45,13 @@ function ProfileCreation(){
 
     /* Store the job to be posted */
     const storeCreatedProfile = (formData) => {
-        localStorage.setItem("CreatedProfile " + (localStorage.length + 1).toString(), JSON.stringify(formData))
+        localStorage.setItem("CreatedProfile", JSON.stringify(formData))
     }
 
     /* Function to check that all fields are filled and to post job */
     const createProfile = () => {
-        if (localStorage.getItem("Created Profile 1")){
-            localStorage.removeItem("Created Profile 1");
+        if (localStorage.getItem("Created Profile")){
+            localStorage.removeItem("Created Profile");
         }
         storeCreatedProfile(formData);
         alert("Profile Created successfully!")
