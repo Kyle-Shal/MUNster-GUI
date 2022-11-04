@@ -3,7 +3,6 @@ FROM ubuntu:22.04
 RUN apt update
 RUN apt upgrade -y
 RUN apt install nodejs -y
-RUN apt nodejs -v
 RUN npm install -g n
 RUN n stable
 RUN apt install python3 -y
